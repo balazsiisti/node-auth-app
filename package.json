@@ -1,6 +1,6 @@
 {
   "name": "express-auth-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodejs fake authentication app",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
-    "express-session": "^1.17.1"
+    "express-session": "^1.17.1",
+    "path": "^0.12.7"
   }
 }

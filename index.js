@@ -1,7 +1,8 @@
 const express = require("express"),
   authApp = express(),
   exphbs = require('express-handlebars'),
-  session = require('express-session');
+  session = require('express-session'),
+  path = require('path');
 
 authApp.use(session({
   secret: 'keyboard cat',
@@ -9,6 +10,7 @@ authApp.use(session({
 
 authApp.engine('handlebars', exphbs());
 authApp.set('view engine', 'handlebars');
+authApp.set('views', path.join(__dirname, 'templates'));
 
 authApp.get('/login', function (req, res) {
   if (req.session.user) {
